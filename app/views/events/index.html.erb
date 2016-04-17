@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Events</h1>
+<%= link_to 'New Event', new_event_path, class:"btn btn-primary add"%>
+<br>
+<br>
+
+
+
+    <% @events.each do |event| %>
+      <div class="col-md-4">
+        <div class="well index-wells">
+        <div class="dropdown">
+  <button class="dropbtn">Options</button>
+  <div class="dropdown-content">
+    <a> <%= link_to 'Show', event%></a>
+    <a> <%= link_to 'Edit', edit_event_path(event)%> </a>
+    <a>  <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       
+        <h4 class="title_price"><%= "#{event.title} || #{event.when}"%></h4>
+        <a> <%= image_tag event.avatar, class:"img-responsive img_user img_event"%></a>
+        <p class="sell_description"><strong>Description:</strong> <%= event.description %></p>
+
+   
+
+       
+</div>
+</div>
+   
+
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

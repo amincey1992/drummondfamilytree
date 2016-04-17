@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Part-Out</h1>
+
+<%= link_to 'Add a New Listing', new_sell_path, class:"btn btn-primary add"%>
+
+
+<br>
+
+
+    <% @sells.each do |sell| %>
+     <div class="col-md-4">
+        <div class="well index-wells">
+        <div class="dropdown">
+  <button class="dropbtn">Options</button>
+  <div class="dropdown-content">
+    <a> <%= link_to 'Show', sell%></a>
+    <a> <%= link_to 'Edit', edit_sell_path(sell)%> </a>
+    <a>  <%= link_to 'Delete', sell, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       
+        <h4 class="title_price"><%= "#{sell.title} || $#{sell.price}"%></h4>
+        <!-- <p><strong>Description</strong> <%= sell.description %></p>
+ -->
+        <p class="sell_description"><strong>Description:</strong> <%= sell.description %></p>
+        <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
+
+        <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
+
+       
+</div>
+</div>
+   
+  <% end %>
+

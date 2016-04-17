@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sell.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @sell.email %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sell.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sell.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sell.price %>
+</p>
+
+<%= link_to 'Edit', edit_sell_path(@sell), class:"btn btn-primary add" %> |
+<%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
