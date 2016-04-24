@@ -36,11 +36,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#084864', end
 
 }
 
+
+
 .error_notification {
 	color:red;
 }
 .notice {
 	color: red;
+
 }
 
 .alert {
@@ -596,17 +599,12 @@ margin-top:3em;
 	padding:10px;
 }
 
-.youtube {
-	padding: 10px;
-	margin-bottom: 10px;
-}
-
 
 .part_out {
 	text-align: center;
 	color: white;
 	margin-bottom: 30px;
-	margin-top: -20px;
+	
 
 
 }
@@ -767,21 +765,21 @@ ul, ol {
 }
 
 
-.videowrapper {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
 }
-.videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	max-width: 
 }
 
 .img_event {
@@ -790,11 +788,63 @@ ul, ol {
 }
 
 
+.alert {
+    color:red;
+    padding: none;
+}
+
+.notice {
+	color:red;
+	padding: none;
+}
+
+.haters {
+	
+	padding: 20px;
+	margin-bottom: 20px;
+	border:2px solid black;
+	background-image:url(<%= asset_path "dot.png"%>);
+
+}
+
+.time {
+	text-align: left;
+	font-size: 13px;
+	margin-top: -20px;
+	font-style: italic;
+	color:white;
+}
+
+.hater {
+	font-style: italic;
+	text-align: left;
+	color:white;
+}
+
+.comment {
+	text-align: center; 
+	margin: auto;
+	color:white;
+}
+
+.blog_time {
+	margin-left: 30px;
+	margin-top: -20px;
+	font-size: 12px;
+	color:white;
+}
+
+.create {
+	margin-bottom: 50px;
+	margin-top: -10px;
+	padding: 10px;
+	color:white;
+}
 
 
-
-
-
+.front {
+	z-index: 10;
+}
 
 
 

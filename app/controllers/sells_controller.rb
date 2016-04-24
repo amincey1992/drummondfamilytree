@@ -10,6 +10,7 @@ class SellsController < ApplicationController
   # GET /sells/1
   # GET /sells/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /sells/new
@@ -69,7 +70,7 @@ class SellsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sell_params
-      params.require(:sell).permit(:name, :email, :title, :description, :price, :avata)
+      params.require(:sell).permit(:name, :email, :title, :description, :price, :avatar, :sell_id, :user_id)
     end
 
 end

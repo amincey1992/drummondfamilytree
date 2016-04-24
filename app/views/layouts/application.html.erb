@@ -40,13 +40,16 @@
 	<header class="banner img-responsive">
 	<h1><strong>Atlanta Genesis Coupe Club </strong></h1>
 	</header>
-	<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+	<div class="alert_notice">
+	<p id="notice" class="notice"><%= notice %></p>
+       <p id="alert"class="alert"><%= alert %></p>
+    </div>
 <%= yield %>
 
 	<footer>
 		<p> &copy; 2016 Atlanta Genesis Coupe Club </p>
 	</footer>
 
+	
 </body>
 </html>

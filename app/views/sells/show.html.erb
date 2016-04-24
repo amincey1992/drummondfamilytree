@@ -1,29 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @sell.name %>
-</p>
+<div>
+<%= link_to 'Edit', edit_sell_path(@sell), class:"btn btn-primary add" %> 
 
-<p>
-  <strong>Email:</strong>
-  <%= @sell.email %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @sell.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @sell.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @sell.price %>
-</p>
-
-<%= link_to 'Edit', edit_sell_path(@sell), class:"btn btn-primary add" %> |
 <%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
+</div>
+
+<div class="container">
+
+        <div class="well index-wells">
+       
+        <h4 class="title_price"><%= "#{@sell.title} || $#{@sell.price}"%></h4>
+
+        <p class="sell_description"><strong>Description:</strong> <%= @sell.description %></p>
+        <a> <%= image_tag @sell.avatar, class:"img-responsive img_user"%></a>
+
+        <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
+       
+</div>
+</div>
+
+<div>
+  <%= render 'comments/form' %>
+</div>
+
+<div class"front">
+  <% @sell.comments.each do |comment| %>
+    <div class="haters">
+      <div class="time"><%= comment.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+    
+      
+      <p class="hater"> From: <%= comment.users.user_name %></p> 
+
+      <p> hello </p>
+  
+      <p class="comment"> <%= comment.comment_entry %> </p>
+    </div>
+  <% end %>
+</div>
+
+
