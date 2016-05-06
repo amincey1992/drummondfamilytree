@@ -1,0 +1,70 @@
+
+<br>
+
+<%= link_to 'Edit', edit_forum_path(@forum), class:"btn btn-primary add" %> 
+<%= link_to 'Back', forums_path, class:"btn btn-primary add" %>
+
+     <div class="col-md-4 text_board">
+        <div class="well index-wells">
+
+ 
+        <h4 class="title_price"><%= "#{@forum.title}" %></h4>
+     
+
+        <p class="sell_description"><strong><%= @forum.category %></strong> <%= @forum.entry %></p>
+
+
+
+       
+       <div><%= @forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+</div>
+
+   
+
+
+
+
+
+
+
+<div class="well index-wells max form_over">
+  <% @forum.comments.each do |comment| %>
+  <% if current_user.id == comment.user.id %>
+    
+             <a>  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete" %></a>
+       <% end %>
+    <div class="sizing">
+<p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %></p> 
+<% if comment.avatar.file? %>
+<a> <%= image_tag comment.avatar, class:"img-responsive img_user"%></a>
+<%end%>
+
+
+      <div class="time"><%= comment.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+
+      
+
+    
+     
+   </div>
+  <% end %>
+  
+  
+
+ </div>
+<div class="text_area">
+  <%= render 'comments/form' %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+
+<h1 class="part_out">AGCC Forum</h1>
+
+<%= link_to 'Add New Post', new_forum_path, class:"btn btn-primary add" %>
+<br>
+
+<% @forums.each do |forum| %>
+     <div class="col-md-4 text_board">
+        <div class="well index-wells">
+
+        <div class="dropdown">
+  <button class="dropbtn">Options</button>
+  <div class="dropdown-content">
+    <a> <%= link_to 'Edit', edit_forum_path(forum)%> </a>
+    <a>  <%= link_to 'Delete', forum, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+  
+        <h4 class="title_price"><%= "#{forum.title}" %></h4>
+     
+
+        <p class="sell_description"><strong><%= forum.category %></strong> <%= forum.entry %></p>
+<% if forum.avatar.file? %>
+        <a> <%= image_tag forum.avatar, class:"img-responsive img_user"%></a>
+<%end%>
+
+
+        <a> <%= link_to "Comment (#{forum.comments.count})", forum, class:"com_btn btn btn-primary"%><%=  %></a>
+
+       
+       <div><%= forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+</div>
+</div>
+   
+  <% end %>
+
+
+

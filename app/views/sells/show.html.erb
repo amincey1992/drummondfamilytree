@@ -1,42 +1,62 @@
-<p id="notice"><%= notice %></p>
 
-<div>
-<%= link_to 'Edit', edit_sell_path(@sell), class:"btn btn-primary add" %> 
 
-<%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
-</div>
 
-<div class="container">
+<div class="container max">
+<br>
+
+
+
 
         <div class="well index-wells">
        
         <h4 class="title_price"><%= "#{@sell.title} || $#{@sell.price}"%></h4>
 
         <p class="sell_description"><strong>Description:</strong> <%= @sell.description %></p>
+
         <a> <%= image_tag @sell.avatar, class:"img-responsive img_user"%></a>
 
         <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
        
 </div>
-</div>
 
-<div>
-  <%= render 'comments/form' %>
-</div>
 
-<div class"front">
+
+
+
+
+<div class="well index-wells max form_over">
   <% @sell.comments.each do |comment| %>
-    <div class="haters">
+  <% if current_user.id == comment.user.id %>
+    
+             <a>  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete" %></a>
+       <% end %>
+    <div class="sizing">
+<p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %></p> 
+
+
+<% if comment.avatar.file? %>
+<a> <%= image_tag comment.avatar, class:"img-responsive img_user"%></a>
+<%end%>
+
+
       <div class="time"><%= comment.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
     
-      
-      <p class="hater"> From: <%= comment.users.user_name %></p> 
-
-      <p> hello </p>
+<% end %>
+ </div>
   
-      <p class="comment"> <%= comment.comment_entry %> </p>
-    </div>
-  <% end %>
+
+ </div>
+<div class="text_area">
+  <%= render 'comments/form' %>
 </div>
+</div>
+
+
+ <div>
+
+  <%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
+  </div>
+
+
 
 

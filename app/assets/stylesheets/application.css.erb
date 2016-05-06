@@ -168,14 +168,14 @@ border-radius: 10px;
 
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	background-image:url(<%= asset_path "carbon.png"%>);
-	font-size: 18px;
-	text-shadow: 2px 2px 2px black;
-	color: white;
+	background-image:url(<%= asset_path "carbon2.png"%>);
+	font-size: 30px;
+	text-shadow: 2px 2px 2px white;
+	color: black;
 	border: 1px solid white;
 	-webkit-border-radius: 250px;
 	border-radius: 250px;
-	border:1px solid black;
+
 	margin:auto;
 	padding-bottom: 10px;
 	display:block;
@@ -193,26 +193,33 @@ section ul {
 
 .connect {
 	text-align:center;
-	color: white;
-	background-image:url(<%= asset_path "carbon.png"%>);
-	border: 1px solid black;
-	padding:10px;
-	margin-top: 20px;
+	color: black;
+	text-shadow: 2px 2px 2px white;
+	background-image:url(<%= asset_path "carbon2.png"%>);
+	border: 5px solid black;
+	padding-top: -10px;
+	margin-top: 300px;
 	margin-bottom: 20px;
-	box-shadow: 5px 5px 5px black;
+	overflow: auto;
+	width: 100%;
+	/*box-shadow: 5px 5px 5px white;*/
 
 }
 
-footer {
+#footer {
+	position: relative;
+	bottom: 0; 
 	text-align: center;
 	color: white;
-	bottom: 0;
-	margin-top: 500px;
+	
+	right: 0;
+	left: 0;
 }
 
 nav {
 	text-align: center;
 	background: black;
+	z-index: 1000;
 }
 
 nav li {
@@ -398,6 +405,7 @@ input, textarea {
 	margin-top: -10px;
 	margin-bottom: -4px;
 	padding-bottom: -100px;
+	padding: 5px;
 
 }
 
@@ -751,7 +759,7 @@ ul, ol {
 .paypal {
 	float:right;
 	width: 100px;
-	margin-top: -50px;
+	/*margin-top: -50px;*/
 	cursor: pointer;
 }
 
@@ -842,14 +850,197 @@ ul, ol {
 }
 
 
-.front {
-	z-index: 10;
+.auto {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 
+.time {
+	padding-top:20px;
+	color: black;
+	text-shadow: 2px 2px 2px white;
+	font-size:10px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 20px;
+	border-bottom: 2px solid black;
+
+
+}
+
+.hater {
+	color: black;
+	text-shadow: 2px 2px 2px white;
+	font-size:15px;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.commenting {
+	color: black;
+	text-shadow: 2px 2px 2px white;
+	font-size:15px;
+	font-family: 'Montserrat', sans-serif;
+	
+}	
+
+.sizing {
+
+}
+
+.max {
+	max-width: 760px;
+
+}
+
+.black {
+	background-color: black;
+}
+
+
+.write_comment {
+	width:100%;
+}
+
+.text_area {
+	width: 100%;
+}
+
+.created {
+	margin-bottom: 50px;
+	margin-top: -10px;
+	padding: 10px;
+	color:white;
+}
 
 
 
+form @comments {
+    padding: -20px;
+    margin: -20px -20px;
+     box-shadow: 5px 5px 5px black; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    max-width: 600px;
 
+}
+
+.text_board {
+
+}
+
+.com_btn {
+	float:right;
+}
+
+li a, .dropbtn1 {
+    display: inline-block;
+    color: white;
+    text-align: center;
+   
+    text-decoration: none;
+}
+
+li a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: white;
+}
+
+li.dropdown1 {
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.enter {
+	margin-top:20px;
+	color:white;
+}
+
+
+.delete {
+	float: right;
+}
+
+
+
+.comment_avatar {
+	margin-top: -40px;
+}
+
+input, textarea {
+	border:none;
+}
+
+.weather {
+	background-color: rgba(0,150,225, .2);
+	font-size: 15px;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	position: absolute;
+	top:0;
+	right:0;
+	margin-top: 45px;
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    vertical-align: center;
+    z-index: 0;
+
+}
+
+.weather_icon {
+	width: 25px;
+	text-shadow: 1px 1px 1px black;
+}
+
+.edit_title {
+	color: white;
+	text-align: center;
+	text-shadow: 4px 4px 4px black;
+}
+
+.avatar_label {
+	color:white;
+	font-size: 15px;
+}
+
+.profile_pic {
+	background-color: rgba(225,225,225, .2);
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.round-image-50 img{
+    background-color: white; 
+    border: 1px solid white;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
 

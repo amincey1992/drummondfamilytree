@@ -19,36 +19,64 @@
 	<nav>
 	<ul>
 	<li> <%= link_to "Home", root_path %></li>
+	<li> <%= link_to "Forum", forums_path %></li>
 	<li> <%= link_to "Events", events_path %></li>
 	<li> <%= link_to "Shout-Out", shoutouts_path %></li>
 	<li> <%= link_to "Part-Out", sells_path %></li>
-	<li> <%= link_to "Videos", videos_path %></li>
 	<li> <%= link_to "Contact", contacts_path %></li>
-	<li> <% if user_signed_in? %>
-  
-  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>        
+
+	<li class="dropdown1"><% if user_signed_in? %>
+
+
+    <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong><%=current_user.user_name%></strong> </a>
+    <div class="dropdown-content1" id="myDropdown">
+      <a><%= link_to 'Edit Profile',edit_user_registration_path %></a>
+      <a><%= link_to "Logout", destroy_user_session_path, :method => :delete %></a>
+    </div>
+<% if current_user.avatar.file? %>
+	  <li class="round-image-50">
+	  <%= image_tag(current_user.avatar.url(:thumb)) %></li>
+<%end%>
 
 		<% else %>
  
-  <%= link_to "Login", new_user_session_path  %>  
+  			<%= link_to "Login", new_user_session_path  %>  
  
 	<% end %>
 	</li>
+	
 	</ul>
 	</nav>
 
 	<header class="banner img-responsive">
 	<h1><strong>Atlanta Genesis Coupe Club </strong></h1>
+
+	<div class="weather">
+	<%= @temp_f %>&deg; F <%=image_tag @weather_icon, class:"weather_icon"%></div>
+
 	</header>
+
 	<div class="alert_notice">
 	<p id="notice" class="notice"><%= notice %></p>
        <p id="alert"class="alert"><%= alert %></p>
     </div>
 <%= yield %>
 
+
+<section class="connect">
+	<h3> Get Connected with the Group! </h3>
+
+	<%= link_to image_tag("facebook.png"), "https://www.facebook.com/groups/AtlantaGenesisCoupeClub/" %>
+
+	<%= link_to image_tag("instagram.png"), "https://www.instagram.com/atlanta.genesis.coupe.club/" %>
+</section>
+
+
+<div id="footer">
 	<footer>
 		<p> &copy; 2016 Atlanta Genesis Coupe Club </p>
 	</footer>
+</div>
 
 	
 </body>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :forums
+  resources :whips
   resources :comments
 devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
@@ -8,7 +10,9 @@ devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logo
 
   get 'events' => 'welcome#events'
 
-  get 'shoutouts' => 'welcome#shoutout'
+  get 'shoutouts' => 'whips#index'
+
+  get 'forum' => 'forums#index'
 
   get 'partout' => 'welcome#partout'
 

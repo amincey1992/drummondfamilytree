@@ -1,0 +1,2 @@
+module WhipsHelper
+end

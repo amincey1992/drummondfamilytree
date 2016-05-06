@@ -1,6 +1,7 @@
 class SellsController < ApplicationController
   before_action :set_sell, only: [:show, :edit, :update, :destroy]
 
+   before_action :authenticate_user!
   # GET /sells
   # GET /sells.json
   def index
@@ -26,7 +27,6 @@ class SellsController < ApplicationController
   # POST /sells.json
   def create
     @sell = Sell.new(sell_params)
-
     respond_to do |format|
       if @sell.save
         format.html { redirect_to @sell, notice: 'Listing was successfully created.' }

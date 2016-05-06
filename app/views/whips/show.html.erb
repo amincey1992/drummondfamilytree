@@ -1,0 +1,34 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @whip.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @whip.email %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @whip.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @whip.year %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @whip.integer %>
+</p>
+
+<p>
+  <strong>Mods:</strong>
+  <%= @whip.mods %>
+</p>
+
+<%= link_to 'Edit', edit_whip_path(@whip) %> |
+<%= link_to 'Back', whips_path %>
