@@ -14,3 +14,4 @@ config.paperclip_defaults = {
     s3_region: ENV.fetch('AWS_REGION'),
   }
 }
+
