@@ -6,6 +6,7 @@ class SellsController < ApplicationController
   # GET /sells.json
   def index
     @sells = Sell.all
+    
   end
 
   # GET /sells/1
