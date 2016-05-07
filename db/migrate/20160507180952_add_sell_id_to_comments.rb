@@ -1,5 +1,5 @@
 class AddSellIdToComments < ActiveRecord::Migration
   def change
-    add_reference :comments, :sell_id, index: true, foreign_key: true
+    add_column :comments, :sell_id, :integer
   end
 end
