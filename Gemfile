@@ -61,7 +61,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'thin'  
-  gem 'aws-sdk', '~> 2.0'
+  gem 'aws-sdk', '~> 1.61.0'
 
 end
 
