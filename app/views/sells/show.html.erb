@@ -26,12 +26,12 @@
 
 <div class="well index-wells max form_over">
   <% @sell.comments.each do |comment| %>
-  <% if user.logged_in? %>
+
   <% if current_user.id == comment.user.id %>
     
              <a>  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete" %></a>
        <% end %>
-       <%end%>
+
     <div class="sizing">
 <p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %></p> 
 
