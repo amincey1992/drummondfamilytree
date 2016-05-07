@@ -1,7 +1,7 @@
 <%= simple_form_for(@forum) do |f| %>
   <%= f.error_notification %>
 
-
+<div class="container">
   <div class="form-group">
     <%= f.input_field :title, placeholder:"Title", class:"form-control"%>
   </div>
@@ -19,3 +19,4 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>
