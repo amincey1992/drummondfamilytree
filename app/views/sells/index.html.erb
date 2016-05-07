@@ -28,12 +28,9 @@
 <% if sell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
-        <% if sell.comments == nil%>
-        <a> <%= link_to "Comment", sell, class:"com_btn btn btn-primary"%></a>
-        <%else%>
+       
+        <a> <%= link_to "Comment (#{@sell.comments.count})", sell, class:"com_btn btn btn-primary"%></a>
 
-        <a> <%= link_to "Comment (#{sell.comments.count})", sell, class:"com_btn btn btn-primary"%></a>
-        <%end%>
 
         <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
 
