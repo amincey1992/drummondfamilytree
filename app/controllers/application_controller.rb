@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
   end
 
   def weather 
-  	response = HTTParty.get("http://api.wunderground.com/api/#{ENV['wunderground_api_key']}/geolookup/conditions/q/GA/Atlanta.json")
+  response = HTTParty.get("http://api.wunderground.com/api/#{ENV['wunderground_api_key']}/geolookup/conditions/q/GA/Atlanta.json")
   
-  @location = response['location'] ? response['location']['city'] : nil
-  @temp_f = response['current_observation'] ['temp_f'] 
-  @weather_icon = response['current_observation'] ['icon_url'] 
+  @location = response['location'] response['location']['city'] : nil
+  @temp_f = response['current_observation'] ['temp_f'] :nil
+  @weather_icon = response['current_observation'] ['icon_url'] : nil
   end
 end
 
