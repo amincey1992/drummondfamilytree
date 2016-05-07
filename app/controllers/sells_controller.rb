@@ -6,7 +6,7 @@ class SellsController < ApplicationController
   # GET /sells.json
   def index
     @sells = Sell.all
-    
+
   end
 
   # GET /sells/1
@@ -17,7 +17,7 @@ class SellsController < ApplicationController
 
   # GET /sells/new
   def new
-    @sell = Sell.new
+    @sell = Sell.new(params[:sell])
   end
 
   # GET /sells/1/edit
