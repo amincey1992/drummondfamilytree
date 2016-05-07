@@ -1,7 +1,7 @@
 class SellsController < ApplicationController
   before_action :set_sell, only: [:show, :edit, :update, :destroy]
 
-   before_action :authenticate_user!
+   before_action :authenticate_user!, :set_sell
   # GET /sells
   # GET /sells.json
   def index
@@ -17,7 +17,7 @@ class SellsController < ApplicationController
 
   # GET /sells/new
   def new
-    @sell = Sell.new(params[:sell])
+    @sell = Sell.new
   end
 
   # GET /sells/1/edit
