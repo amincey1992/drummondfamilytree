@@ -25,7 +25,7 @@
 
  -->    <p class="sell_description">  <strong>Seller: <%= sell.user.user_name %> </strong></p>
         <p class="sell_description"><strong>Description:</strong> <%= sell.description %></p>
-<% if csell.avatar.file? %>        
+<% if sell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
 
