@@ -25,12 +25,11 @@
 
  -->    <p class="sell_description">  <strong>Seller: <%= sell.user.user_name %> </strong></p>
         <p class="sell_description"><strong>Description:</strong> <%= sell.description %></p>
-<% if sell.avatar.file? %>        
+<% if csell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
-       
-        <a> <%= link_to "Comment", sell, class:"com_btn btn btn-primary"%></a>
 
+        <a> <%= link_to "Comment (#{sell.comments.count})", sell, class:"com_btn btn btn-primary"%></a>
 
         <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
 
