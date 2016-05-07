@@ -21,7 +21,7 @@ config.consider_all_requests_local = true
 
 
 
-config.assets.compile = true
+config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
 
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
