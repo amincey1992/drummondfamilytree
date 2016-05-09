@@ -35,7 +35,7 @@
 	<li> <%= link_to "Part-Out", sells_path %></li>
 	<li> <%= link_to "Contact", contacts_path %></li>
 
-	<li class="dropdown1"><% if user_signed_in? || current_user.provider=='facebook' %>
+	<li class="dropdown1"><% if user_signed_in? || if user_signed_in? && current_user.provider=='facebook' %>
 
 
     <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong><%=current_user.user_name%></strong> </a>
