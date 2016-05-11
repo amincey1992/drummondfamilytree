@@ -34,7 +34,8 @@
              <a>  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete" %></a>
        <% end %>
     <div class="sizing">
-<p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %></p> 
+<p class="hater"> <%= comment.user.user_name %><li class="round-image-50">
+	  <%= image_tag(current_user.avatar.url(:thumb)) %></li>: <%= comment.comment_entry %></p> 
 <% if comment.avatar.file? %>
 <a> <%= image_tag comment.avatar, class:"img-responsive img_user"%></a>
 <%end%>
