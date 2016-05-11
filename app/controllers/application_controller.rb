@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  helper_method :current_user
+  helper_method :current_user, :logged_using_omniauth?
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   add_flash_types :success
@@ -21,6 +21,15 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+
+  def logged_using_omniauth? request
+  res = nil
+  omniauth = request.env["omniauth.auth"]
+  res = Authentication.find_by_provider_and_uid ↵  
+  (omniauth['provider'], omniauth['uid']) if omniauth
+  res  
+end
 
 end
 

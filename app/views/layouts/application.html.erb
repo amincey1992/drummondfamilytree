@@ -35,7 +35,7 @@
 	<li> <%= link_to "Part-Out", sells_path %></li>
 	<li> <%= link_to "Contact", contacts_path %></li>
 
-	<li class="dropdown1"><% if user_signed_in? || user_signed_in? && current_user.provider=='facebook' %>
+	<li class="dropdown1"><% if user_signed_in? %>
 
 
     <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong><%=current_user.user_name%></strong> </a>
@@ -54,9 +54,32 @@
       <a><%= link_to "AGCC Login", new_user_session_path, class:"login_button"%>  </a>
       <div class="or"> or </div>
       <a><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></a>
-  		
- 
 	<% end %>
+
+
+
+<!-- if user is logged in through omniauth facebook -->
+<li class="dropdown1"><% if logged_using_omniauth? %>
+
+
+    <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong><%=current_user.user_name%></strong> </a>
+    <div class="dropdown-content1" id="myDropdown">
+      <a><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></a>
+     
+    </div>
+<%end%>
+
+		<% else %>
+ 	<a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong>Login</strong> </a>
+    <div class="dropdown-content1" id="myDropdown">
+      <a><%= link_to "AGCC Login", new_user_session_path, class:"login_button"%>  </a>
+      <div class="or"> or </div>
+      <a><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></a>
+	<% end %>
+
+
+
+
 	</li>
 	
 	</ul>
