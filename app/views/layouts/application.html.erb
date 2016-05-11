@@ -48,10 +48,6 @@
 	  <%= image_tag(current_user.avatar.url(:thumb)) %></li>
 <%end%>
 
-
-		<%elsif logged_in_using_omniauth?%>
-		<a><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></a>
-
 		<% else %>
  	<a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong>Login</strong> </a>
     <div class="dropdown-content1" id="myDropdown">
