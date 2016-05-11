@@ -33,8 +33,7 @@
        <% end %>
 
     <div class="sizing">
-<p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %><li class="round-image-50">
-    <%= image_tag(current_user.avatar.url(:thumb)) %></li></p> 
+<p class="hater"> <%= comment.user.user_name %>: <%= comment.comment_entry %><%= comment.user.user_name %><div class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></div></p> 
 
 
 <% if comment.avatar.file? %>
