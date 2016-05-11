@@ -51,12 +51,9 @@
 		<% else %>
  	<a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong>Login</strong> </a>
     <div class="dropdown-content1" id="myDropdown">
-      <a><%= link_to "AGCC Login", new_user_session_path, class:"login_button"%>  </a>
-      <div class="or"> or </div>
-      <a><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></a>
+      <a><%= link_to "Login", new_user_session_path  %>  </a>
 	<% end %>
 	</li>
-	
 	</ul>
 	</nav>
 
