@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   def logged_in_using_omniauth?
   res = nil
   omniauth = request.env["omniauth.auth"]
-  res = Authentication.find_by_provider_and_uid ↵  
+  res = Authentication.find_by_provider_and_uid   
   (omniauth['provider'], omniauth['uid']) if omniauth
   res  
 end
