@@ -13,8 +13,8 @@
 
         <p class="sell_description"><strong><%= @forum.category %>:</strong> <%= @forum.entry %></p>
 
-        <% if forum.avatar.file? %>
-        <a> <%= image_tag forum.avatar, class:"img-responsive img_user"%></a>
+        <% if @forum.avatar.file? %>
+        <a> <%= image_tag @forum.avatar, class:"img-responsive img_user"%></a>
 <%end%>
 
 
