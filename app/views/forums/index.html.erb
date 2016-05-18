@@ -20,7 +20,7 @@
         <h4 class="title_price"><%= "#{forum.title}" %></h4>
      
 
-        <p class="sell_description"><strong><%= forum.category %></strong> <%= forum.entry %></p>
+        <p class="sell_description"><strong><%= forum.category %>:</strong> <%= forum.entry %></p>
 <% if forum.avatar.file? %>
         <a> <%= image_tag forum.avatar, class:"img-responsive img_user"%></a>
 <%end%>
