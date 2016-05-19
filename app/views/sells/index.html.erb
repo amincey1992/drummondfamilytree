@@ -8,7 +8,7 @@
 
 
     <% @sells.each do |sell| %>
-     <div class="col-md-4 text_board">
+     <div class="col-md-4">
         <div class="well index-wells">
     <% if current_user.id == sell.user.id %>
         <div class="dropdown">
@@ -19,12 +19,12 @@
   </div>
 </div>
        <%end%>
-        <h4 class="title_price"><%= "#{sell.title} || $#{sell.price}"%></h4>
+        <h4 class="title_price text_board"><%= "#{sell.title} || $#{sell.price}"%></h4>
         <!-- <p><strong>Description</strong> <%= sell.description %></p>
 
 
- -->    <p class="sell_description">  <strong>Seller: <%= sell.user.user_name %> </strong></p>
-        <p class="sell_description"><strong>Description:</strong> <%= sell.description %></p>
+ -->    <p class="sell_description text_board">  <strong>Seller: <%= sell.user.user_name %> </strong></p>
+        <p class="sell_description text_board"><strong>Description:</strong> <%= sell.description %></p>
 <% if sell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
@@ -33,7 +33,7 @@
 
         <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
 
-       <div><%= sell.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+       <div class="text_board"><%= sell.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 </div>
 </div>
    

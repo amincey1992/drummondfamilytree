@@ -6,7 +6,7 @@
 <br>
 
 <% @forums.each do |forum| %>
-     <div class="col-md-4 text_board">
+     <div class="col-md-4">
         <div class="well index-wells">
 <% if current_user.id == forum.user.id %>
         <div class="dropdown">
@@ -18,10 +18,10 @@
 </div>
        <%end%>
   
-        <h4 class="title_price"><%= "#{forum.title}" %></h4>
+        <h4 class="title_price text_board"><%= "#{forum.title}" %></h4>
      
 
-        <p class="sell_description"><strong><%= forum.category %>:</strong> <%= forum.entry %></p>
+        <p class="sell_description text_board"><strong><%= forum.category %>:</strong> <%= forum.entry %></p>
 <% if forum.avatar.file? %>
         <a> <%= image_tag forum.avatar, class:"img-responsive img_user"%></a>
 <%end%>
@@ -30,7 +30,7 @@
         <a> <%= link_to "Comment (#{forum.comments.count})", forum, class:"com_btn btn btn-primary"%><%=  %></a>
 
        
-       <div><%= forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+       <div class="text_board"><%= forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 </div>
 </div>
    
