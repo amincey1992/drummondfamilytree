@@ -29,7 +29,7 @@
 
   <% if current_user.id == comment.user.id %>
     
-             <a>  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete" %></a>
+             <a>  <%= link_to '', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete glyphicon glyphicon-trash" %></a>
        <% end %>
 
     <div class="sizing">
