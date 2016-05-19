@@ -2,7 +2,7 @@
 
 
 <div class="container max">
-<br>
+   <br />
 
 
 
@@ -17,7 +17,7 @@
 
         <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
        
-</div>
+        </div>
 
 
 
@@ -42,13 +42,13 @@
 
 
       <div class="time"><%= comment.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
-    
+     </div>
 <% end %>
- </div>
+
   
 
  </div>
-<div class="text_area add_com">
+<div class="text_area">
   <%= render 'comments/form' %>
 </div>
 </div>
