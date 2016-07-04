@@ -7,7 +7,7 @@
 
 
 development:
-  host: localhost
+  host: postgresql
   adapter: postgresql
   database: my_database_development
   pool: 5
