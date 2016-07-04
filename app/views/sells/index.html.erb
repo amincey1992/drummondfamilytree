@@ -1,7 +1,7 @@
 
-<h1 class="part_out">Part-Out</h1>
+<h1 class="part_out">Family Giveaway <%= image_tag "giveaway.png", alt: "Atlanta Atlanta Genesis Coupe picture", class: "camera" %></h1>
 
-<%= link_to 'Add a New Listing', new_sell_path, class:"btn btn-primary add"%>
+<%= link_to 'Add a New Item', new_sell_path, class:"btn btn-primary add"%>
 
 
 <br>
@@ -23,15 +23,13 @@
         <!-- <p><strong>Description</strong> <%= sell.description %></p>
 
 
- -->    <p class="sell_description text_board">  <strong>Seller: <%= sell.user.user_name %> </strong></p>
+ -->    <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(sell.user.avatar, class:"avatar_forum") %></a>  <strong><%= sell.user.user_name %> </strong></p>
         <p class="sell_description text_board"><strong>Description:</strong> <%= sell.description %></p>
 <% if sell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
 
-        <a> <%= link_to "Comment (#{sell.comments.count})", sell, class:"com_btn btn btn-primary"%></a>
-
-        <%= image_tag "paypal.gif", alt: "paypal logo", class: "paypal img-responsive" %>
+        <a> <%= link_to "Comment (#{sell.comments.count})", sell, class:"com_btn btn btn-primary"%></a><p class="like_circle"><%= link_to "", like_sell_path(sell), class:"glyphicon glyphicon-thumbs-up like"%><a class="count_score"><%= sell.score %></a> </p>
 
        <div class="text_board"><%= sell.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 </div>

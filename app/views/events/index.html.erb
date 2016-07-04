@@ -1,6 +1,6 @@
 
 
-<h1 class="part_out">Events</h1>
+<h1 class="part_out">Events <%= image_tag "calendar.png", alt: "Atlanta Atlanta Genesis Coupe picture", class: "camera" %></h1>
 <%= link_to 'New Event', new_event_path, class:"btn btn-primary add"%>
 <br>
 <br>
@@ -19,9 +19,14 @@
   </div>
 </div>
        
-        <h4 class="title_price"><%= "#{event.title} || #{event.when}"%></h4>
+        <h4 class="title_price"><%= "#{event.title}"%></h4>
+
+        <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(event.user.avatar, class:"avatar_forum") %></a>  <strong><%= event.user.user_name %> </strong></p>
+        <p><strong>When:</strong> <%="#{event.when}"%> </p>
         <a> <%= image_tag event.avatar, class:"img-responsive img_user img_event"%></a>
         <p class="sell_description"><strong>Description:</strong> <%= event.description %></p>
+
+        <div class="btn btn-primary rsvp"><strong> R S V P </strong></div>
 
    
 

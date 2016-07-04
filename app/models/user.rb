@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,6 +16,8 @@ attr_accessor :photo_file_name
 attr_accessor :photo_content_type
 attr_accessor :photo_file_size
 attr_accessor :photo_updated_at
+
+acts_as_voter
 
 def self.create_with_omniauth(auth)
     create! do |user|

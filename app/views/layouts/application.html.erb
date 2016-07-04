@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Agcc</title>
+  <title>Drummond.com</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,9 +34,9 @@
 	<li> <%= link_to "Home", root_path %></li>
 	<li> <%= link_to "Forum", forums_path %></li>
 	<li> <%= link_to "Events", events_path %></li>
-	<li> <%= link_to "Shout-Out", shoutouts_path %></li>
-	<li> <%= link_to "Part-Out", sells_path %></li>
-	<li> <%= link_to "Contact", contacts_path %></li>
+	<li> <%= link_to "Albums", shoutouts_path %></li>
+	<li> <%= link_to "Giveaway", sells_path %></li>
+	<li> <%= link_to "Genealogy", contacts_path %></li>
 	<li class="dropdown1"><% if user_signed_in? %>
 
 
@@ -61,7 +61,7 @@
 	</nav>
 
 	<header class="jumbrotron banner img-responsive">
-	<h1><strong>Atlanta Genesis Coupe Club </strong></h1>
+	<h1><strong>Drummond.com </strong></h1>
 	</header>
 
 	<div class="alert_notice">
@@ -72,29 +72,30 @@
 
 
 <section class="connect">
-	<h3> Get Connected with the Group! </h3>
+	<h3> "Dear friends, let us love one another, for love comes from God. Everyone who loves has been born of God and knows God."        John 4:7 </h3>
 
-	<div class="social_icons">
-	<%= link_to 'https://www.facebook.com/groups/AtlantaGenesisCoupeClub/', target: "_blank" do %>
-  	<%= image_tag('social1.png').html_safe %>
-	<% end %>
-
-	<%= link_to 'https://www.instagram.com/atlanta.genesis.coupe.club/', target: "_blank" do %>
-  	<%= image_tag('social2.png').html_safe %>
-	<% end %>
-	</div>
-
-	
 </section>
 
 
 <div id="footer">
 	<footer>
-		<p> &copy; 2016 Atlanta Genesis Coupe Club </p>
+		<p> &copy; 2016 Drummond.com </p>
 	</footer>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 	
 </body>
 </html>

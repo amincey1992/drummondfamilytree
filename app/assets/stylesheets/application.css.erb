@@ -16,13 +16,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Emblema+One);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
 * {
 	padding:0;
 	margin:0;
 }
 
 body {
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 }
 
 .cover {
@@ -66,8 +67,15 @@ width: 80%;
 	color: red;
 }
 
+.alert {
+    padding: 0px;
+    margin-bottom: 0px;
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+
 .rap {
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	padding-bottom: 50px;
 	margin-bottom:20px;
 	padding:20px;
@@ -94,7 +102,7 @@ width: 80%;
 	max-width: 570px;
 }
 .back {
-	background-image:url(<%= asset_path "carbon2.png"%>);
+	
 	margin-top: 20px;
 	margin-bottom:20px;
 	padding:20px;
@@ -105,7 +113,7 @@ width: 80%;
 
 
 div.back2 {
-	background-image:url(<%= asset_path "carbon2.png"%>);
+	background-image:url(<%= asset_path "carbon3.png"%>);
 	margin-top: 20px;
 	margin-bottom:20px;
 	padding:20px;
@@ -121,15 +129,17 @@ div.back2 {
 }
 
 .banner h1 {
-	padding-top: 50px;
+	padding-top: 70px;
 	/*background-color: 255, 255, 255, .8;*/
 	-webkit-text-stroke-width: .5px;
-   -webkit-text-stroke-color: white;
+   -webkit-text-stroke-color: black;
    font-size: 2em;
    -webkit-font-smoothing: antialiased;
    text-shadow:2px 6px 10px white;
    	color:black;
-   	text-align: center;
+   	text-align: right;
+   	margin-right: 50px;
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.2)));
 
 
 }
@@ -139,8 +149,8 @@ html {
 }
 
 .banner {
-	background-image:url(<%= asset_path "atlanta.jpg"%>);
-	height: 175px;
+	background-image:url(<%= asset_path "tree.jpg"%>);
+	height: 300px;
 	background-size:cover;
 	border-top:5px solid black;
 	font-size: 1.5em;
@@ -151,7 +161,7 @@ html {
 }
 
 .bar {
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 }
 
 .glyphicon-trash:hover {
@@ -169,7 +179,101 @@ html {
 	display:block;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	-webkit-border-radius: 10px;
+border-radius: 20px;
 	
+}
+
+.avatar_forum {
+	border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
+
+
+.fam {
+	background-image:url(<%= asset_path "wood.png"%>);
+	margin: auto;
+	text-align: center;
+	padding-top: .1px;
+	padding-bottom: .1px;
+	z-index: 0;
+
+}	
+
+.like {
+	padding: 5px;
+	margin-left: 5px;
+
+}
+
+.glyphicon.glyphicon-thumbs-up {
+	font-size: 20px;
+	vertical-align: center;
+	
+	text-shadow: 1px 4px 2px white;
+}
+
+.like_circle {
+	border: 1px solid black;
+	border-radius: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 70px;
+    font-size: 18px;
+    float: right;
+    margin-right: 10px;
+   	background-image:url(<%= asset_path "paper.png"%>);
+}
+
+.like_circle:hover {
+	background-color: blue;
+}
+
+.count_score {
+	float: right;
+	margin-top: 2px;
+	vertical-align: center;
+	color: #428bca;
+	margin-right: 20px;
+}
+
+.count_score:hover {
+
+	text-decoration: none;
+
+}
+
+.move {
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+.btn.btn-primary.rsvp {
+	margin-top: 40px;
+	background-color: black;
+	color:white;
+	border: 1px dotted white;
+	text-shadow: 2px 1px 1px red;
+	letter-spacing: .5px;
+	overflow: auto;
+}
+
+.frame {
+	background-image:url(<%= asset_path "wood2.png"%>);
+	padding-top: 3px;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	box-shadow: 10px 5px 10px black;
+	border: 2px solid black;
 }
 
 .intro {
@@ -177,9 +281,9 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	width: 100%;
 	text-align: center;
-	color: white;
+	color: black;
 	font-size: 14px;
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "carbon3.png"%>);
 	
 	box-shadow: 5px 5px 5px black;
 	padding: 10px;
@@ -206,7 +310,7 @@ border-radius: 10px;
 
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	background-image:url(<%= asset_path "carbon2.png"%>);
+	background-image:url(<%= asset_path "carbon3.png"%>);
 	font-size: 30px;
 	text-shadow: 2px 2px 2px white;
 	color: black;
@@ -231,25 +335,31 @@ section ul {
 
 .connect {
 	text-align:center;
+	font-style: italic;
 	color: black;
 	text-shadow: 2px 2px 2px white;
-	background-image:url(<%= asset_path "carbon2.png"%>);
-	border: 5px solid black;
+	background-image:url(<%= asset_path "carbon3.png"%>);
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
 	padding-top: -10px;
 	margin-top: 300px;
 	margin-bottom: 20px;
 	overflow: auto;
 	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
 	/*box-shadow: 5px 5px 5px white;*/
+}
 
+.connect h3 {
+	font-size: 25px;
 }
 
 #footer {
 	position: relative;
 	bottom: 0; 
 	text-align: center;
-	color: white;
-	
+	color: black;
 	right: 0;
 	left: 0;
 }
@@ -260,7 +370,7 @@ section ul {
 
 nav {
 	text-align: center;
-	background: black;
+	background-image:url(<%= asset_path "cloth.png"%>);
 	z-index: 1000;
 	position: fixed;
 	top:0;
@@ -379,12 +489,17 @@ input, textarea {
 }
 
 .weekly {
-	color: white;
+	color: black;
 	text-align: center;
-	background-image:url(<%= asset_path "carbon.png"%>);
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-image:url(<%= asset_path "wood.png"%>);
+	padding: 20px;
 	margin-bottom: 15px;
+}
+
+.camera {
+	width: 60px;
+	margin-left: 20px;
+	margin-bottom: 10px;
 }
 
 .contact_seller {
@@ -426,7 +541,7 @@ input, textarea {
 .connectpartout {
 	text-align:center;
 	color: white;
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	border: 1px solid black;
 	
 	
@@ -435,7 +550,7 @@ input, textarea {
 .con {
 	text-align:center;
 	color: white;
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	padding:10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -445,7 +560,7 @@ input, textarea {
 	font-size: 25px;
 	border: 1px solid black;
 	color: white;
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	display: block;
 	text-align: center;
 	margin-top: -10px;
@@ -475,8 +590,20 @@ input, textarea {
 	
 }
 
+.dna {
+	background-image:url(<%= asset_path "dna.png"%>);
+	width: 100%;
+	text-align: center;
+	height: 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+    background-position: center; 
+	
+
+}
+
 .whip {
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	margin: auto;
 	color: white;
 	padding-top: 20px;
@@ -518,7 +645,7 @@ border-radius: 10px;
 }
 
 .space {
-	background-image:url(<%= asset_path "carbon.png"%>);
+	background-image:url(<%= asset_path "paper.png"%>);
 	margin-top: 20px;
 	color: white;
 	text-align: center;
@@ -533,8 +660,7 @@ border-radius: 10px;
 }
 
 p {
-	margin-bottom:1em;
-	
+
 }
 
 article {
@@ -593,7 +719,7 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .partlisttwo {
@@ -603,7 +729,7 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .partlistthree {
@@ -613,7 +739,7 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .partlistfour {
@@ -623,7 +749,7 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .partlistfive {
@@ -633,7 +759,7 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .partlistsix {
@@ -643,21 +769,23 @@ margin-top:3em;
 	margin-left: 30px;
 	width: 40%;
 	overflow: auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 }
 
 .vids {
 	text-align: center;
 	margin:auto;
-	background-image: url(<%= asset_path "carbon.png"%>);
+	background-image: url(<%= asset_path "paper.png"%>);
 	padding:10px;
 }
 
 
 .part_out {
 	text-align: center;
-	color: white;
+	color: black;
 	margin-bottom: 30px;
+	padding: 20px;
+	background-image: url(<%= asset_path "wood.png"%>);
 	
 
 
@@ -686,7 +814,7 @@ ul, ol {
 }
 
 .index-wells {
-	background-image: url(<%= asset_path "carbon2.png"%>);
+	background-image: url(<%= asset_path "carbon3.png"%>);
 	overflow: auto;
 }
 		
@@ -716,9 +844,9 @@ ul, ol {
 }
 
 .btn-primary {
-    color: white;
-    background-color: black;
-    border-color: white;
+    color: black;
+    background-color: #f0ecdb;
+    border-color: black;
         
     border-radius: 4px;
 }
@@ -731,6 +859,7 @@ ul, ol {
 .contact_us h3{
 	font-size: 40px;
 	color: white;
+	padding-top: 50px;
 	text-shadow: 2px 2px 2px black;
 	-webkit-text-stroke-width: .5px;
    -webkit-text-stroke-color: black;
@@ -738,8 +867,8 @@ ul, ol {
 }
 .contact_us h5{
 	font-size: 18px;
-
-	color: white;
+	margin-top: 110px;
+	color: black;
 	
 }
 .contact_us {
@@ -955,7 +1084,9 @@ ul, ol {
 	margin-bottom: 50px;
 	margin-top: -10px;
 	padding: 10px;
-	color:white;
+	color:black;
+	background-image:url(<%= asset_path "carbon3.png"%>);
+
 }
 
 

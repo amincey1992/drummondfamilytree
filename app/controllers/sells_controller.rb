@@ -63,6 +63,17 @@ class SellsController < ApplicationController
     end
   end
 
+  def upvote
+    @sell = Sell.find(params[:id])
+    @sell.upvote_by current_user
+    redirect_to sells_path
+  end
+  def downvote
+  @sell = Sell.find(params[:id])
+  @sell.downvote_by current_user
+  redirect_to sells_path
+end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sell

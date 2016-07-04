@@ -1,6 +1,6 @@
 
 
-<h1 class="part_out">AGCC Forum</h1>
+<h1 class="part_out">Family Forum <%= image_tag "forum.png", alt: "Atlanta Atlanta Genesis Coupe picture", class: "camera" %></h1>
 
 <%= link_to 'Add New Post', new_forum_path, class:"btn btn-primary add" %>
 <br>
@@ -17,20 +17,25 @@
   </div>
 </div>
        <%end%>
+
+       <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(forum.user.avatar, class:"avatar_forum") %></a>  <strong><%= forum.user.user_name %> </strong></p>
   
         <h4 class="title_price text_board"><%= "#{forum.title}" %></h4>
      
 
         <p class="sell_description text_board"><strong><%= forum.category %>:</strong> <%= forum.entry %></p>
-<% if forum.avatar.file? %>
-        <a> <%= image_tag forum.avatar, class:"img-responsive img_user"%></a>
-<%end%>
 
 
-        <a> <%= link_to "Comment (#{forum.comments.count})", forum, class:"com_btn btn btn-primary"%><%=  %></a>
+        <a> <%= link_to "Comment (#{forum.comments.count})", forum, class:"com_btn btn btn-primary"%><%=  %></a><p class="like_circle"><%= link_to "", like_forum_path(forum), class:"glyphicon glyphicon-thumbs-up like"%><a class="count_score"><%= forum.score %></a> </p>
 
        
        <div class="text_board"><%= forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+
+       
+      
+
+
+     
 </div>
 </div>
    

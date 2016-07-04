@@ -2,22 +2,13 @@
 
 
 <div class="background container">
-<h1 class="weekly"> AGCC Car of the Week!</h1>
 
-<form class="shout" action="car">
-    <ol>
-      <li>
-      <label class="shoutout"> Owner: Maro Kang </label>
-      </li>
+<div class="frame">
+<h1 class="weekly"> Drummond Family Photos! <%= image_tag "camera.jpg", alt: "Atlanta Atlanta Genesis Coupe picture", class: "camera" %></h1>
+</div>
 
-
-      <%= image_tag "bruce.jpg", alt: "Atlanta Atlanta Genesis Coupe picture", class: "img-responsive bruce" %>
-    </ol>
-
-    <h1 class="space"> 2013 2.0t R-Spec  </h1>
-
-    <%= link_to 'Enter Your Whip!', new_whip_path, class:"btn btn-primary enter" %>
-</form>
+    <%= link_to 'Add a New Album', new_whip_path, class:"btn btn-primary" %>
+</div>
 
 
 
