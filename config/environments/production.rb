@@ -14,16 +14,6 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-
-
-
-config.consider_all_requests_local = true
-
-
-
-config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
-
-
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
@@ -86,32 +76,4 @@ config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-   config.action_mailer.default_url_options = { host: 'https://atlanta-genesis-coupe-club.herokuapp.com'}
-
-Rails.application.routes.default_url_options[:host] = 'https://atlanta-genesis-coupe-club.herokuapp.com'
-
-
-
-
-
-
-
-
-config.paperclip_defaults = {
-  :storage => :s3,
-  :region => ENV['AWS_REGION'],
-  :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-
-  }
-}
-
-
-
-
-
-
-
 end

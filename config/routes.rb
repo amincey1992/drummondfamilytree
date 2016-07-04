@@ -1,49 +1,4 @@
 Rails.application.routes.draw do
-  get "/auth/:provider/callback" => "sessions#create"
-  get "/signout" => "sessions#destroy", :as => :signout
-
-  resources :forums do 
-
-  member do
-    get "like", to: "forums#upvote"
-    get "dislike", to: "forums#downvote"
-  end 
-end 
-
-  resources :whips
-  resources :comments
-devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
-
-  resources :events
-
-  resources :sells do 
-
-  member do
-    get "like", to: "sells#upvote"
-    get "dislike", to: "sells#downvote"
-  end 
-end 
-
-
-
-  root 'welcome#index'
-
-  get 'events' => 'welcome#events'
-
-  get 'shoutouts' => 'whips#index'
-
-  get 'forum' => 'forums#index'
-
-  get 'partout' => 'welcome#partout'
-
-  get 'videos' => 'welcome#videos'
-
-  get 'contact' => 'welcome#contact'
-
-  match '/contacts',     to: 'contacts#new',             via: 'get'
-resources "contacts", only: [:new, :create]
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
