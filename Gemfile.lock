@@ -74,9 +74,6 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    devise_invitable (1.5.5)
-      actionmailer (>= 3.2.6, < 5)
-      devise (>= 3.2.0)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.6.0)
@@ -235,7 +232,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  devise_invitable
   figaro
   httparty
   jbuilder (~> 2.0)
