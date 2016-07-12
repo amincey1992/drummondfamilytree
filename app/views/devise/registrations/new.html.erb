@@ -1,21 +1,45 @@
-<h2 class="part_out">Sorry :(</h2>
+<h2 class="part_out">Sign up</h2>
 
 
 
-
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
 <div class="back2">
   <div class="container rap">
-  <div class="sorry"> Must be invited by an Admin to join this site.</div>
+    <div class="form-group">
+      <%= f.input_field :email, required: true, autofocus: true, placeholder:"Email", class:"form-control" %>
+    </div>
 
-  <div class="sorry_admin"> Contact "cdmincey@gmail.com" for an account</div> 
+    <div class="form-group">
+      <%= f.text_field :user_name, required: true, autofocus:true, placeholder:"Username", class:"form-control"%> 
+    </div>
+
+    <div class="form-group">
+      <%= f.input_field :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder:"Password", class:"form-control"%>
+    </div>
+      
+    <div class="form-group">
+      <%= f.input_field :password_confirmation, required: true, placeholder:"Confirm Password", class:"form-control" %>
+    </div>
+
+    <div class="profile_pic">
+      <div class="form-group">
+          <%= f.label "Avatar", class: 'col-sm-2 control-label profile_pic_label' %>
+          <div class="col-sm-6 file">
+              <%= f.file_field :avatar %>
+          </div>
       </div>
-   
+    </div>
 
 <!--     <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
     <div class="extra_features"> Sign into facebook for extra features </div> -->
 
 
-    
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class:"btn btn-primary minus" %>
+    </div>
+
+    <% end %>
 
    </div>
 
