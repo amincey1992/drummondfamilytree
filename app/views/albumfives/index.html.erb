@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Bob, Pam & Famly</h1>
+
+
+<%= link_to 'Add New Photo', new_albumfive_path, class:"btn btn-primary add" %>
+
+<div class="somespace"></div>
+
+
+  <div>
+    <% @albumfives.each do |albumfive| %>
+      <div class="col-md-6">
+        
+        <% if albumfive.avatar.file? %>        
+        <a> <%= image_tag albumfive.avatar, class:"img-responsive photoalbums"%></a>
+        <div class="phototitle"><%= albumfive.title %><% if current_user.id == albumfive.user.id %>
+        <div class="dropdown2">
+  <button class="dropbtn2">Options</button>
+  <div class="dropdown-content2">
+    <a> <%= link_to 'Edit', edit_albumfive_path(albumfive)%> </a>
+    <a>  <%= link_to 'Delete', albumfive, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       <%end%>
+       <p class="like_circle2"><%= link_to "", like_albumfive_path(albumfive), class:"glyphicon glyphicon-thumbs-up like2"%><a class="count_score2"><%= albumfive.score %></a></div>
+<%end%>
+        
+      </div>
+      <div class="somespace"></div>
+    <% end %>
+<div class="somemorespace"></div>

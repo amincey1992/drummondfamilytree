@@ -1,0 +1,2 @@
+module AlbumsixesHelper
+end

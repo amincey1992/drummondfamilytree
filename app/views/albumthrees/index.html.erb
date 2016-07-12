@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Kathy, Gene & Family</h1>
+
+
+<%= link_to 'Add New Photo', new_albumthree_path, class:"btn btn-primary add" %>
+
+<div class="somespace"></div>
+
+
+  <div>
+    <% @albumthrees.each do |albumthree| %>
+      <div class="col-md-6">
+        
+        <% if albumthree.avatar.file? %>        
+        <a> <%= image_tag albumthree.avatar, class:"img-responsive photoalbums"%></a>
+        <div class="phototitle"><%= albumthree.title %><% if current_user.id == albumthree.user.id %>
+        <div class="dropdown2">
+  <button class="dropbtn2">Options</button>
+  <div class="dropdown-content2">
+    <a> <%= link_to 'Edit', edit_albumthree_path(albumthree)%> </a>
+    <a>  <%= link_to 'Delete', albumthree, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       <%end%>
+       <p class="like_circle2"><%= link_to "", like_albumthree_path(albumthree), class:"glyphicon glyphicon-thumbs-up like2"%><a class="count_score2"><%= albumthree.score %></a></div>
+<%end%>
+        
+      </div>
+      <div class="somespace"></div>
+    <% end %>
+<div class="somemorespace"></div>
+
+

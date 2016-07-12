@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Cindy, Wayne & Family</h1>
+
+
+<%= link_to 'Add New Photo', new_albumseven_path, class:"btn btn-primary add" %>
+
+<div class="somespace"></div>
+
+
+  <div>
+    <% @albumsevens.each do |albumseven| %>
+      <div class="col-md-6">
+        
+        <% if albumseven.avatar.file? %>        
+        <a> <%= image_tag albumseven.avatar, class:"img-responsive photoalbums"%></a>
+        <div class="phototitle"><%= albumseven.title %><% if current_user.id == albumseven.user.id %>
+        <div class="dropdown2">
+  <button class="dropbtn2">Options</button>
+  <div class="dropdown-content2">
+    <a> <%= link_to 'Edit', edit_albumseven_path(albumseven)%> </a>
+    <a>  <%= link_to 'Delete', albumseven, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       <%end%>
+       <p class="like_circle2"><%= link_to "", like_albumseven_path(albumseven), class:"glyphicon glyphicon-thumbs-up like2"%><a class="count_score2"><%= albumseven.score %></a></div>
+<%end%>
+        
+      </div>
+      <div class="somespace"></div>
+    <% end %>
+<div class="somemorespace"></div>

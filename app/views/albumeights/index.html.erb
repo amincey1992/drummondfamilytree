@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="part_out">Bob, Pam & Famly</h1>
+
+
+<%= link_to 'Add New Photo', new_albumeight_path, class:"btn btn-primary add" %>
+
+<div class="somespace"></div>
+
+
+  <div>
+    <% @albumeights.each do |albumeight| %>
+      <div class="col-md-6">
+        
+        <% if albumeight.avatar.file? %>        
+        <a> <%= image_tag albumeight.avatar, class:"img-responsive photoalbums"%></a>
+        <div class="phototitle"><%= albumeight.title %><% if current_user.id == albumeight.user.id %>
+        <div class="dropdown2">
+  <button class="dropbtn2">Options</button>
+  <div class="dropdown-content2">
+    <a> <%= link_to 'Edit', edit_albumeight_path(albumeight)%> </a>
+    <a>  <%= link_to 'Delete', albumeight, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  </div>
+</div>
+       <%end%>
+       <p class="like_circle2"><%= link_to "", like_albumeight_path(albumeight), class:"glyphicon glyphicon-thumbs-up like2"%><a class="count_score2"><%= albumeight.score %></a></div>
+<%end%>
+        
+      </div>
+      <div class="somespace"></div>
+    <% end %>
+<div class="somemorespace"></div>
+

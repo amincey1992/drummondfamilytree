@@ -1,0 +1,2 @@
+module AlbumtensHelper
+end

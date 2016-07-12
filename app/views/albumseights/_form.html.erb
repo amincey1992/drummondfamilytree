@@ -1,0 +1,23 @@
+<%= simple_form_for(@albumseight) do |f| %>
+  <%= f.error_notification %>
+
+   <div class="container">
+
+  <div class="form-group">
+    <%= f.hidden_field :user_id, value: current_user.id%>
+  </div>
+
+  <div class="form-group">
+    <%= f.input_field :title, placeholder:"Title", class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Photo" %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Create Post", class:"btn btn-primary" %>
+  </div>
+<% end %>
+</div>
