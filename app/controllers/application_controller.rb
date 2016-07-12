@@ -15,7 +15,10 @@ class ApplicationController < ActionController::Base
    devise_parameter_sanitizer.for(:account_update) { |u| u.permit({ roles: [] }, :email, :password, :password_confirmation, :current_password, :user_name, :avatar) }
   end
 
-
+ def is_admin?
+    signed_in? ? current_user.admin : false
+  end
+end
  
   # private
  
