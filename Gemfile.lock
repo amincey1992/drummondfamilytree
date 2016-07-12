@@ -54,7 +54,6 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.5)
-    cancan (1.6.10)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -75,6 +74,9 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise_invitable (1.5.5)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.6.0)
@@ -231,9 +233,9 @@ DEPENDENCIES
   aws-sdk (< 2.0)
   bootstrap-sass
   byebug
-  cancan
   coffee-rails (~> 4.1.0)
   devise
+  devise_invitable
   figaro
   httparty
   jbuilder (~> 2.0)
