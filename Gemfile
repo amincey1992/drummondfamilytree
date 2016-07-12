@@ -20,7 +20,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'acts_as_votable'
 
 
-
 gem "paperclip"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
