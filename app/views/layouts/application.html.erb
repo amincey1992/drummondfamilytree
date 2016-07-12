@@ -40,13 +40,7 @@
 	<li class="dropdown1"><% if user_signed_in? %>
 
 
-    <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()">
-
-    <%= if is_admin? %>
-     <strong class="user_admin"><%=current_user.user_name%></strong> 
-    <%else%>
-    <strong><%=current_user.user_name%></strong> 
-     </a>
+    <a href="javascript:void(0)" class="dropbtn1" onclick="myFunction()"> <strong><%=current_user.user_name%></strong> </a>
     <div class="dropdown-content1" id="myDropdown">
       <a><%= link_to 'Edit Profile',edit_user_registration_path %></a>
       <a><%= link_to "Logout", destroy_user_session_path, :method => :delete %></a>
