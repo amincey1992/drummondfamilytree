@@ -10,6 +10,7 @@
     <% @events.each do |event| %>
       <div class="col-md-4 text_board">
         <div class="well index-wells">
+        <% if current_user.id == forum.user.id || current_user.admin%>
         <div class="dropdown">
   <button class="dropbtn">Options</button>
   <div class="dropdown-content">
@@ -18,6 +19,7 @@
     <a>  <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></a>
   </div>
 </div>
+      <%end%>
        
         <h4 class="title_price"><%= "#{event.title}"%></h4>
 

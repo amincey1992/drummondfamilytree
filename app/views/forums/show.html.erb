@@ -37,7 +37,7 @@
 
 <div class="well index-wells max form_over">
   <% @forum.comments.each do |comment| %>
-  <% if current_user.id == comment.user.id %>
+  <% if current_user.id == comment.user.id || current_user.admin%>
     
              <a>  <%= link_to '', comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete glyphicon glyphicon-trash" %></a>
        <% end %>

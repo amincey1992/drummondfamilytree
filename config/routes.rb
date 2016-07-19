@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   
+  get 'activities/index'
+
+  resources :activities
+
   resources :albumtens do 
     member do
     get "like", to: "albumetens#upvote"

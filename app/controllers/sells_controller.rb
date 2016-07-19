@@ -5,7 +5,7 @@ class SellsController < ApplicationController
   # GET /sells
   # GET /sells.json
   def index
-    @sells = Sell.all
+    @sells = Sell.all.order("created_at DESC")
 
   end
 

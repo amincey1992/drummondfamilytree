@@ -10,7 +10,7 @@
     <% @sells.each do |sell| %>
      <div class="col-md-4">
         <div class="well index-wells">
-    <% if current_user.id == sell.user.id %>
+    <% if current_user.id == sell.user.id || current_user.admin%>
         <div class="dropdown">
   <button class="dropbtn">Options</button>
   <div class="dropdown-content">

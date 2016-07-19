@@ -4,7 +4,7 @@ class AlbumfivesController < ApplicationController
   # GET /albumfives
   # GET /albumfives.json
   def index
-    @albumfives = Albumfive.all
+    @albumfives = Albumfive.all.order("created_at DESC")
   end
 
   # GET /albumfives/1

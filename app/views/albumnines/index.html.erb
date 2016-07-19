@@ -13,7 +13,7 @@
         
         <% if albumnine.avatar.file? %>        
         <a> <%= image_tag albumnine.avatar, class:"img-responsive photoalbums"%></a>
-        <div class="phototitle"><%= albumnine.title %><% if current_user.id == albumnine.user.id %>
+        <div class="phototitle"><%= albumnine.title %><% if current_user.id == albumnine.user.id || current_user.admin%>
         <div class="dropdown2">
   <button class="dropbtn2">Options</button>
   <div class="dropdown-content2">

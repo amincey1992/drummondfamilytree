@@ -14,7 +14,7 @@
         
         <% if albumone.avatar.file? %>        
         <a> <%= image_tag albumone.avatar, class:"img-responsive photoalbums"%></a>
-        <div class="phototitle"><%= albumone.title %><% if current_user.id == albumone.user.id %>
+        <div class="phototitle"><%= albumone.title %><% if current_user.id == albumone.user.id || current_user.admin%>
         <div class="dropdown2">
   <button class="dropbtn2">Options</button>
   <div class="dropdown-content2">
