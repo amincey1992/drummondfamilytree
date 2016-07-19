@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require owl.carousel
+ *= require owl.theme
  */
 
 @import url(https://fonts.googleapis.com/css?family=Emblema+One);
@@ -106,8 +108,8 @@ width: 80%;
 	margin-top: 20px;
 	margin-bottom:20px;
 	padding:20px;
-	max-width: 570px;
-	text-align: center;
+	max-width: 600px;
+	/*text-align: center;*/
 	margin: auto;
 }
 
@@ -203,7 +205,7 @@ border-radius: 20px;
 	margin: auto;
 	text-align: center;
 	padding-top: .1px;
-	padding-bottom: .1px;
+	padding-bottom: 25px;
 	z-index: 0;
 
 }	
@@ -282,16 +284,16 @@ border-radius: 20px;
 
 	font-family: 'Montserrat', sans-serif;
 	width: 100%;
-	text-align: center;
+	/*text-align: center;*/
 	color: black;
 	font-size: 14px;
 	background-image:url(<%= asset_path "carbon3.png"%>);
 	
 	box-shadow: 5px 5px 5px black;
-	padding: 10px;
+	padding: 20px;
 	border:1px solid black;
 	margin:auto;
-	line-height: 25px;
+	
 	display:block;
 	margin-bottom: 40px;
 	-webkit-border-radius: 10px;
@@ -1373,6 +1375,17 @@ border-radius: 20px;
 
 }
 
+.line {
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.title_home {
+	text-align: center;
+	font-size: 18px;
+}
+
 .count_score2 {
 	float: right;
 	vertical-align: center;
@@ -1475,3 +1488,178 @@ border-radius: 20px;
 	height: 600px;
 	background-color: red;
 }
+
+
+
+
+
+
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+  max-width: 600px;
+  background-image: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  color: #0DB43E;
+  opacity: .8;
+  background-size:cover;
+  background-position:center;
+  line-height:1em;
+  font-family: 'Righteous', cursive;
+
+
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333c40+0,323e3e+1,374141+2,374141+2,313b3c+3,364041+4,303d3d+5,354140+6,313b3e+7,363f41+8,363d42+9,323d3d+9,353f41+10,323c3e+12,354041+13,2f3c3d+14,313e3d+14,383f41+15,303c3d+16,364141+17,313c3e+19,374143+20,323d3d+21,364042+22,303d3d+23,364040+24,080808+24,0db43e+24,0db43e+33,080808+33,a1c2a7+34,a1c2a7+68,a1c2a6+68,0db43e+68,0db43e+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333c40+0,323e3e+1,374141+2,374141+2,313b3c+3,364041+4,303d3d+5,354140+6,313b3e+7,363f41+8,363d42+9,323d3d+9,353f41+10,323c3e+12,354041+13,2f3c3d+14,313e3d+14,383f41+15,303c3d+16,364141+17,313c3e+19,374143+20,323d3d+21,364042+22,303d3d+23,364040+24,080808+24,080808+24,080808+24,0db43e+24,0db43e+26,a1c2a7+29,a1c2a7+68,a1c2a6+68,0db43e+68,0db43e+100 */
+background: #333c40; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #333c40 0%, #323e3e 1%, #374141 2%, #374141 2%, #313b3c 3%, #364041 4%, #303d3d 5%, #354140 6%, #313b3e 7%, #363f41 8%, #363d42 9%, #323d3d 9%, #353f41 10%, #323c3e 12%, #354041 13%, #2f3c3d 14%, #313e3d 14%, #383f41 15%, #303c3d 16%, #364141 17%, #313c3e 19%, #374143 20%, #323d3d 21%, #364042 22%, #303d3d 23%, #364040 24%, #080808 24%, #080808 24%, #080808 24%, #0db43e 24%, #0db43e 26%, #a1c2a7 29%, #a1c2a7 68%, #a1c2a6 68%, #0db43e 68%, #0db43e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #333c40 0%,#323e3e 1%,#374141 2%,#374141 2%,#313b3c 3%,#364041 4%,#303d3d 5%,#354140 6%,#313b3e 7%,#363f41 8%,#363d42 9%,#323d3d 9%,#353f41 10%,#323c3e 12%,#354041 13%,#2f3c3d 14%,#313e3d 14%,#383f41 15%,#303c3d 16%,#364141 17%,#313c3e 19%,#374143 20%,#323d3d 21%,#364042 22%,#303d3d 23%,#364040 24%,#080808 24%,#080808 24%,#080808 24%,#0db43e 24%,#0db43e 26%,#a1c2a7 29%,#a1c2a7 68%,#a1c2a6 68%,#0db43e 68%,#0db43e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #333c40 0%,#323e3e 1%,#374141 2%,#374141 2%,#313b3c 3%,#364041 4%,#303d3d 5%,#354140 6%,#313b3e 7%,#363f41 8%,#363d42 9%,#323d3d 9%,#353f41 10%,#323c3e 12%,#354041 13%,#2f3c3d 14%,#313e3d 14%,#383f41 15%,#303c3d 16%,#364141 17%,#313c3e 19%,#374143 20%,#323d3d 21%,#364042 22%,#303d3d 23%,#364040 24%,#080808 24%,#080808 24%,#080808 24%,#0db43e 24%,#0db43e 26%,#a1c2a7 29%,#a1c2a7 68%,#a1c2a6 68%,#0db43e 68%,#0db43e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333c40', endColorstr='#0db43e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+.carousel-inner > .item {
+
+ 
+    -webkit-transition: 1s ease-in-out left;
+    -moz-transition: 1s ease-in-out left;
+    -o-transition: 1s ease-in-out left;
+    transition: 1.form input[type="text"], .form textareas ease-in-out left;
+}
+
+
+
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    /*height: 500px;*/
+}
+
+.btn-primary {
+  background-color: #0DB43E;
+  border-color: black;
+  color: black;
+}
+
+.carousel h1 {
+  color: #0DB43E;
+  font-size: 30px;
+  opacity: 1;
+  background-color: 8, 8, 8, .9;
+  text-shadow: 2px 2px 4px black;
+}
+
+.carousel .item:nth-child(1){
+	background-image:url(<%= asset_path "siblings.jpg"%>);
+ background-repeat: no-repeat;
+ text-align: center;
+
+}
+
+
+.carousel .item:nth-child(2){
+	background-image:url(<%= asset_path "siblings2.jpg"%>);
+	background-repeat: no-repeat;
+}
+
+.carousel .item:nth-child(3){
+	background-image:url(<%= asset_path "siblings3.jpg"%>);
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

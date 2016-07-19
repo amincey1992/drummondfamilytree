@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require owl.carousel
+
+
 setTimeout(function() {
     $('#alert').fadeOut('slow');
 }, 1000); // <-- time in milliseconds
