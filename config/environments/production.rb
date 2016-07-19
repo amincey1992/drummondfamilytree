@@ -88,7 +88,7 @@ config.paperclip_defaults = {
   }
 }
 
-
+config.assets.compile = true
 
   
 end
