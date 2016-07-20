@@ -8,4 +8,4 @@ class UserNotifier < ApplicationMailer
     :subject => 'Thanks for signing up for our Drummondfamilytree.com!' )
   end
 end
-end
+
