@@ -157,6 +157,28 @@ div.back2 {
 
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+.banner h1 {
+	padding-top: 95px;
+	/*background-color: 255, 255, 255, .8;*/
+	-webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: black;
+   font-size: 1.2em;
+   -webkit-font-smoothing: antialiased;
+   text-shadow:2px 6px 10px white;
+   	color:black;
+   	text-align: right;
+   	margin-right: 40px;
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.2)));
+
+
+}
+
+
+}
 
 
 html {
@@ -1520,6 +1542,8 @@ border-radius: 20px;
   background-image: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  min-width: 300px
+  min-height:200px;
   
 }
 /* Since positioning the image, we need to help out the caption */
@@ -1658,7 +1682,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333c40', end
 	font-size: 18px;
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
 
+.carousel {
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+  max-width: 300px;
+  background-image: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 200px;
+  color: #0DB43E;
+  opacity: .8;
+  background-size:cover;
+  background-position:center;
+  line-height:1em;
+  font-family: 'Righteous', cursive;
+	}
+}
 
 
 
