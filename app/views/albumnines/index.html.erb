@@ -11,7 +11,10 @@
     <% @albumnines.each do |albumnine| %>
       <div class="col-md-6">
         
-        <% if albumnine.avatar.file? %>        
+        <% if albumnine.avatar.file? %>  
+        <div class="album_top">
+        <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(albumnine.user.avatar, class:"avatar_album") %></a>  <strong><%= albumnine.user.user_name %> </strong></p>      
+        </div>      
         <a> <%= image_tag albumnine.avatar, class:"img-responsive photoalbums"%></a>
         <div class="phototitle"><%= albumnine.title %><% if current_user.id == albumnine.user.id || current_user.admin%>
         <div class="dropdown2">

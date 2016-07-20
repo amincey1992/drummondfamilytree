@@ -11,7 +11,10 @@
     <% @albumfours.each do |albumfour| %>
       <div class="col-md-6">
         
-        <% if albumfour.avatar.file? %>        
+        <% if albumfour.avatar.file? %> 
+        <div class="album_top">
+        <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(albumfour.user.avatar, class:"avatar_album") %></a>  <strong><%= albumfour.user.user_name %> </strong></p>      
+        </div>       
         <a> <%= image_tag albumfour.avatar, class:"img-responsive photoalbums"%></a>
         <div class="phototitle"><%= albumfour.title %><% if current_user.id == albumfour.user.id || current_user.admin%>
         <div class="dropdown2">
