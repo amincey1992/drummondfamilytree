@@ -10,7 +10,7 @@
     <% @events.each do |event| %>
       <div class="col-md-4 text_board">
         <div class="well index-wells">
-        <% if current_user.id == forum.user.id || current_user.admin%>
+        <% if current_user.id == event.user.id || current_user.admin%>
         <div class="dropdown">
   <button class="dropbtn">Options</button>
   <div class="dropdown-content">
