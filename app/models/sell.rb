@@ -4,7 +4,7 @@ class Sell < ActiveRecord::Base
   belongs_to :user
 
 has_attached_file :avatar,
-  source_file_options: { all: '-auto-orient' },
+  :convert_options => { :all => '-auto-orient' },
   styles: { original: "", thumb: "200x200#" }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 acts_as_votable
