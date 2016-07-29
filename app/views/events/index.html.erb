@@ -25,10 +25,12 @@
 
         <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(event.user.avatar, class:"avatar_forum") %></a>  <strong><%= event.user.user_name %> </strong></p>
         <p><strong>When:</strong> <%="#{event.when}"%> </p>
+         <% if event.avatar.file? %> 
         <a> <%= image_tag event.avatar, class:"img-responsive img_user img_event"%></a>
+        <%end%>
         <p class="sell_description"><strong>Description:</strong> <%= event.description %></p>
 
-        <div class="btn btn-primary rsvp"><strong> R S V P </strong></div>
+        <!-- <div class="btn btn-primary rsvp"><strong> R S V P </strong></div> -->
 
    
 
