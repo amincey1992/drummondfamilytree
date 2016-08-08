@@ -4,7 +4,7 @@
 <div class="container max">
    <br />
 
-
+  <%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
 
 
         <div class="well index-wells">
@@ -24,8 +24,38 @@
 
 
 
-  <%= link_to 'Back', sells_path, class:"btn btn-primary add"%>
+
   </div>
+
+  <div class="well index-wells max form_over">
+  <% @sell.comment_sells.each do |comment_sell| %>
+  <% if current_user.id == comment_sell.user.id || current_user.admin%>
+    
+             <a>  <%= link_to '', comment_sell, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary delete glyphicon glyphicon-trash" %></a>
+       <% end %>
+    <div class="sizing">
+<p class="hater"> <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(comment_sell.user.avatar, class:"avatar_forum")%>  </a><strong><%= comment_sell.user.user_name %>:</strong> <%= comment_sell.comment_entry %></p> 
+<% if comment_sell.avatar.file? %>
+<a> <%= image_tag comment_sell.avatar, class:"img-responsive img_user"%></a>
+<%end%>
+
+
+      <div class="time"><%= comment_sell.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+
+      
+
+    
+     
+   </div>
+  <% end %>
+  
+  
+
+ </div>
+<div class="text_area">
+  <%= render 'comment_sells/form' %>
+</div>
+</div>
 
 
 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   
-  get 'activities/index'
+  resources :comment_sells
+  
 
   resources :activities
 

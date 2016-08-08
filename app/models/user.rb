@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :sells
   has_many :forums
   has_many :comments
+  has_many :comment_sells
   has_many :albumones
   has_many :albumtwos
   has_many :albumthrees

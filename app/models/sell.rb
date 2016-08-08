@@ -1,6 +1,8 @@
 class Sell < ActiveRecord::Base
 
-  has_many :comments
+ 
+  has_many :comment_sells
+
   belongs_to :user
 
 has_attached_file :avatar,

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comment_sell.author %>
+</p>
+
+<p>
+  <strong>Comment entry:</strong>
+  <%= @comment_sell.comment_entry %>
+</p>
+
+<%= link_to 'Edit', edit_comment_sell_path(@comment_sell) %> |
+<%= link_to 'Back', comment_sells_path %>
