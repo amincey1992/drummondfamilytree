@@ -24,7 +24,11 @@
 
 
  -->    <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(sell.user.avatar, class:"avatar_forum") %></a>  <strong><%= sell.user.user_name %> </strong></p>
+        <% if sell.description.blank?%>
+
+        <%else%>
         <p class="sell_description text_board"><strong>Description:</strong> <%= sell.description %></p>
+        <%end%>
 <% if sell.avatar.file? %>        
         <a> <%= image_tag sell.avatar, class:"img-responsive img_user"%></a>
 <%end%>
