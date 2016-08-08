@@ -9,12 +9,22 @@
 
         <div class="well index-wells">
        
-        <h4 class="title_price"><%= "#{@sell.title} || $#{@sell.price}"%></h4>
+       <% if @sell.price == 0 || @sell.price.blank?%>
+       <h4 class="title_price text_board"><%= "#{@sell.title} || Free!"%></h4>
+       <%else%>
+        <h4 class="title_price text_board"><%= "#{@sell.title} || $#{@sell.price}"%></h4>
+        
 
+        <%end%>
+
+        <% if @sell.description.blank?%>
+
+        <%else%>
         <p class="sell_description"><strong>Description:</strong> <%= @sell.description %></p>
-
+        <%end%>
+        <% if @sell.avatar.file? %> 
         <a> <%= image_tag @sell.avatar, class:"img-responsive img_user"%></a>
-       
+       <%end%>
         </div>
 
 

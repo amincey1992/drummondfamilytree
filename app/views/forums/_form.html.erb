@@ -15,8 +15,8 @@
     <%= f.input_field :entry, placeholder:"What's on your mind?", class:"form-control"%>
   </div>
 
-  <div class="form-group">
-    <%= f.select :category, options_for_select([['Social'], ['Album'], ['Event'], ['Giveaway'], ['Random']], :include_blank => 'What is your post related to?'), class:"form-control" %>
+  <div class="cat_title"> Choose a Category</div><div class="form-group">
+    <%= f.select :category, options_for_select([['Social'], ['Album'], ['Event'], ['Giveaway'], ['Genealogy'], ['Random']], :include_blank => 'What is your post related to?'), class:"form-control" %>
   </div>
 
   <div class="form-group">

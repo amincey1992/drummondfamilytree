@@ -20,7 +20,7 @@
 </div>
        <%end%>
 
-       <% if sell.price == 0%>
+       <% if sell.price == 0 || sell.price.blank?%>
        <h4 class="title_price text_board"><%= "#{sell.title} || Free!"%></h4>
        <%else%>
         <h4 class="title_price text_board"><%= "#{sell.title} || $#{sell.price}"%></h4>
