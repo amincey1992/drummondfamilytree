@@ -19,11 +19,15 @@
   </div>
 </div>
        <%end%>
+
+       <% if sell.price == 0%>
+       <h4 class="title_price text_board"><%= "#{sell.title} || Free!"%></h4>
+       <%else%>
         <h4 class="title_price text_board"><%= "#{sell.title} || $#{sell.price}"%></h4>
-        <!-- <p><strong>Description</strong> <%= sell.description %></p>
+        <!-- <p><strong>Description</strong> <%= sell.description %></p>--> 
 
-
- -->    <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(sell.user.avatar, class:"avatar_forum") %></a>  <strong><%= sell.user.user_name %> </strong></p>
+        <%end%>
+           <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(sell.user.avatar, class:"avatar_forum") %></a>  <strong><%= sell.user.user_name %> </strong></p>
         <% if sell.description.blank?%>
 
         <%else%>
