@@ -50,7 +50,7 @@
 <%end%>
 
 
-      <div class="time"><%= comment_sell.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+      <div class="time"><%= comment_sell.created_at.localtime.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 
       
 
