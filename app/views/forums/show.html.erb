@@ -24,7 +24,7 @@
 
 
        
-       <div><%= @forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+       <div><%= @forum.created_at.localtime.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 </div>
 
    

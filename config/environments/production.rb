@@ -35,6 +35,7 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 config.time_zone = 'Eastern Time (US & Canada)'
+ config.active_record.default_timezone = 'Eastern Time (US & Canada)'
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
