@@ -33,7 +33,7 @@
         <a> <%= link_to "Comment (#{forum.comments.count})", forum, class:"com_btn btn btn-primary"%><%=  %></a><p class="like_circle"><%= link_to "", like_forum_path(forum), class:"glyphicon glyphicon-thumbs-up like"%><a class="count_score"><%= forum.score %></a> </p>
 
        
-       <div class="text_board"><%= forum.created_at.strftime("%m/%d/%Y at %I:%m %p") %> </div>
+       <div class="text_board"><%= forum.created_at.localtime.strftime("%m/%d/%Y at %I:%m %p") %> </div>
 
        
       
