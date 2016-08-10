@@ -37,8 +37,8 @@ end
   resources :albumnines do 
 
   member do
-    get "like", to: "albumfives#upvote"
-    get "dislike", to: "albumfives#downvote"
+    get "like", to: "albumnines#upvote"
+    get "dislike", to: "albumnines#downvote"
   end 
 end 
   resources :albumfours do 
