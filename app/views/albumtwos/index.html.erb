@@ -13,10 +13,10 @@
       <div class="col-md-6">
         
         <% if albumtwo.avatar.file? %>        
-        <a> <%= image_tag albumtwo.avatar, class:"img-responsive photoalbums"%></a>
         <div class="album_top">
         <p class="sell_description text_board"><a class="avatar_forum"> <%= image_tag(albumtwo.user.avatar, class:"avatar_album") %></a>  <strong><%= albumtwo.user.user_name %> </strong></p>      
         </div>
+        <a> <%= image_tag albumtwo.avatar, class:"img-responsive photoalbums"%></a>
         <div class="phototitle"><%= albumtwo.title %><% if current_user.id == albumtwo.user.id || current_user.admin%>
         <div class="dropdown2">
   <button class="dropbtn2">Options</button>
