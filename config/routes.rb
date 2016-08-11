@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :albumtens do 
     member do
-    get "like", to: "albumetens#upvote"
+    get "like", to: "albumtens#upvote"
     get "dislike", to: "albumtens#downvote"
   end 
 end 

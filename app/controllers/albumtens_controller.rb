@@ -64,7 +64,7 @@ class AlbumtensController < ApplicationController
   def upvote
     @albumten = Albumten.find(params[:id])
     @albumten.upvote_by current_user
-    redirect_to albumsixs_path
+    redirect_to albumtens_path
   end
   def downvote
   @albumten = Albumten.find(params[:id])
