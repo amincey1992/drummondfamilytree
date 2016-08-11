@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'jquery-turbolinks'
 gem "awesome_print", require:"ap"
 
+gem 'public_activity'
+ 
 gem 'mail_form'
 gem 'simple_form'
 

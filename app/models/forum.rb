@@ -1,5 +1,6 @@
 class Forum < ActiveRecord::Base
-	
+	include PublicActivity::Model
+tracked owner: ->(controller, model) { controller && controller.current_user }
 
   has_many :comments
   belongs_to :user
