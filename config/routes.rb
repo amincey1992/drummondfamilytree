@@ -74,7 +74,6 @@ end
   get "/signout" => "sessions#destroy", :as => :signout
 
   resources :forums do 
-
   member do
     get "like", to: "forums#upvote"
     get "dislike", to: "forums#downvote"

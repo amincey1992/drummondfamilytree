@@ -1,6 +1,6 @@
 class ForumsController < ApplicationController
   before_action :set_forum, only: [:show, :edit, :update, :destroy, :upvote]
-
+respond_to :js, :json, :html
  before_action :authenticate_user!
   # GET /forums
   # GET /forums.json
