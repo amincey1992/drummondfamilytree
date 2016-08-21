@@ -30,6 +30,9 @@ class SellsController < ApplicationController
     @sell = Sell.new(sell_params)
     respond_to do |format|
       if @sell.save
+        User.find_each do |user|
+        SellsMailer.sell_notification(@sell).deliver
+      end
         format.html { redirect_to @sell, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @sell }
       else

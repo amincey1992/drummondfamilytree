@@ -92,18 +92,18 @@ config.paperclip_defaults = {
 config.assets.compile = true
 
 
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 config.action_mailer.delivery_method = :smtp
-
 config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :domain               => "drummondfamilytree.com",
-      :user_name            => "drummondfamilytree@gmail.com",
-      :password             => "trinity62",
-      :authentication       => :plain,
-      :enable_starttls_auto => true
+    address: "smtp.gmail.com",
+    port: "587",
+    domain: "gmail.com",
+    authentication: "plain",
+    :openssl_verify_mode => 'none',
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
 }
-
 
   
 end

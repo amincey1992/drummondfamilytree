@@ -28,6 +28,9 @@ class AlbumonesController < ApplicationController
 
     respond_to do |format|
       if @albumone.save
+         User.find_each do |user|
+        AlbumonesMailer.albumone_notification(@albumone).deliver
+      end
         format.html { redirect_to @albumone, notice: 'Albumone was successfully created.' }
         format.json { render :show, status: :created, location: @albumone }
       else

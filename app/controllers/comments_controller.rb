@@ -30,6 +30,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        User.find_each do |user|
+        CommentMailer.comment_notification(@comment).deliver
+      end
         format.html { redirect_to :back, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else

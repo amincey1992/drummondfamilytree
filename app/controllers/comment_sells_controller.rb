@@ -29,6 +29,9 @@ before_action :authenticate_user!
 
     respond_to do |format|
       if @comment_sell.save
+        User.find_each do |user|
+        CommentSellsMailer.comment_sell_notification(@comment_sell).deliver
+      end
         format.html { redirect_to :back, notice: 'Comment sell was successfully created.' }
         format.json { render :show, status: :created, location: @comment_sell }
       else

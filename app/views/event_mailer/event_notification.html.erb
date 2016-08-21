@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong><%=@event.user.user_name%></strong> Created a New Event!</p> 
+    <p><h3><%= @event.title %></h3></p>
+    
+    <p> When: "<%= @event.when %>"</p>
+
+    <p> Where: "<%= @event.where %>"</p>
+
+    <p> Description: "<%= @event.description %>"</p>
+  </body>
+</html>

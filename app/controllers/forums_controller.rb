@@ -32,6 +32,9 @@ respond_to :js, :json, :html
 
     respond_to do |format|
       if @forum.save
+       
+        ForumMailer.forum_notification(@forum).deliver
+      
         format.html { redirect_to @forum, notice: 'Forum was successfully created.' }
         format.json { render :show, status: :created, location: @forum }
       else
